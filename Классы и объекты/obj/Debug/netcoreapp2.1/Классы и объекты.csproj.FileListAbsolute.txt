@@ -1,0 +1,11 @@
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\bin\Debug\netcoreapp2.1\Классы и объекты.deps.json
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\bin\Debug\netcoreapp2.1\Классы и объекты.runtimeconfig.json
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\bin\Debug\netcoreapp2.1\Классы и объекты.runtimeconfig.dev.json
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\bin\Debug\netcoreapp2.1\Классы и объекты.dll
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\bin\Debug\netcoreapp2.1\Классы и объекты.pdb
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\obj\Debug\netcoreapp2.1\Классы и объекты.csprojAssemblyReference.cache
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\obj\Debug\netcoreapp2.1\Классы и объекты.csproj.CoreCompileInputs.cache
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\obj\Debug\netcoreapp2.1\Классы и объекты.AssemblyInfoInputs.cache
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\obj\Debug\netcoreapp2.1\Классы и объекты.AssemblyInfo.cs
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\obj\Debug\netcoreapp2.1\Классы и объекты.dll
+C:\Users\deadp\Desktop\Projects\Programms\2 курс - ООП\Классы и объекты\Классы и объекты\obj\Debug\netcoreapp2.1\Классы и объекты.pdb
