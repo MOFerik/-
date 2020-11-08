@@ -79,7 +79,7 @@ namespace Классы_и_объекты
 
         ~Planet()
         {
-            Console.WriteLine($"Oh no! Planet {this.name} was destroyed!\n");
+            Console.WriteLine($"Planet {this.name} was destroyed!\n");
         }
     };
 
@@ -88,7 +88,7 @@ namespace Классы_и_объекты
         private double sTemp;
         private bool water;
 
-        Atmosphere atmosphere;
+        Atmosphere atmosphere = new Atmosphere();
 
         public void SetTemp(double temp)
         {
@@ -166,6 +166,11 @@ namespace Классы_и_объекты
             else
                 Console.WriteLine($"It is an Earth like planet. It's surface temperature is {this.sTemp} Celsius and it doesn't have any water. ");
         }
+
+        ~EarthLike()
+        {
+            Console.WriteLine($"An Earth-like planet was destroyed. We hope that no aliens were destroyed with it!");
+        }
     };
 
     class Atmosphere
@@ -200,7 +205,22 @@ namespace Классы_и_объекты
     {
         static void Main(string[] args)
         {
+            CreateAndDestroy();
+            GC.Collect();
+            Console.ReadLine();
 
+            Console.WriteLine($"\n");
+
+            Planet pl1 = new Planet("X01");
+            Planet pl2 = new Planet("Jupiter", 70);
+            Planet pl3 = new EarthLike("Mars", 0.5, 0.7);
+            Planet pl4 = new Planet(pl1);
+
+            pl3.CalcGrav();
+        }
+
+        private static void CreateAndDestroy()
+        {
             EarthLike pl0 = new EarthLike();
             pl0.SetName("Hyperion");
             pl0.SetRad(1.5);
@@ -210,15 +230,7 @@ namespace Классы_и_объекты
             pl0.SetWater(true);
             pl0.CreateAtmos(2, true);
             pl0.LifeProb();
-
-            Console.WriteLine($"\n");
-
-            Planet pl1 = new Planet("X01");
-            Planet pl2 = new Planet("Jupiter", 70);
-            Planet pl3 = new Planet("Mars", 0.5, 0.7);
-            Planet pl4 = new Planet(pl1);
-
-            pl3.CalcGrav();
+            pl0 = null;
         }
     }
 }
