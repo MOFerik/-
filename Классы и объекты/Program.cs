@@ -4,12 +4,12 @@ namespace Классы_и_объекты
 {
     class Planet
     {
-        public string name;
+        protected string name;
 
         protected double radius;
         protected double density;
 
-        private double sGrav;
+        protected double sGrav;
 
         public void SetName(string n)
         {
@@ -88,6 +88,8 @@ namespace Классы_и_объекты
         private double sTemp;
         private bool water;
 
+        Atmosphere atmosphere;
+
         public void SetTemp(double temp)
         {
             sTemp = temp;
@@ -103,9 +105,18 @@ namespace Классы_и_объекты
                 Console.WriteLine($"Water on {this.name} was not found. ");
         }
 
+        public void CreateAtmos(double dens, bool ox)
+        {
+            this.atmosphere = new Atmosphere(dens, ox);
+            if (ox)
+                Console.WriteLine($"{this.name} has an atmosphere. It's density is {dens} e.a.d. and it contains an oxygen.");
+            else
+                Console.WriteLine($"{this.name} has an atmosphere. It's density is {dens} e.a.d. and it doesn't contain an oxygen.");
+        }
+
         public void LifeProb()
         {
-            if (this.radius * this.density > 0.5 && this.radius * this.density < 1.5 && this.sTemp < 50 && this.sTemp > -30 && water)
+            if (this.radius * this.density > 0.5 && this.radius * this.density < 1.5 && this.sTemp < 50 && this.sTemp > -30 && water && atmosphere.GetDens() > 0.8 && atmosphere.GetDens() < 3 && atmosphere.GetOxy())
                 Console.WriteLine($"{this.name} is likely to be habitable ");
             else
                 Console.WriteLine($"{this.name} is probably not habitable ");
@@ -157,6 +168,34 @@ namespace Классы_и_объекты
         }
     };
 
+    class Atmosphere
+    {
+        private double atmDens;
+        private bool oxygen;
+
+        public double GetDens()
+        {
+            return atmDens;
+        }
+
+        public bool GetOxy()
+        {
+            return oxygen;
+        }
+
+        public Atmosphere()
+        {
+            atmDens = 0;
+            oxygen = false;
+        }
+
+        public Atmosphere(double dens, bool ox)
+        {
+            atmDens = dens;
+            oxygen = ox;
+        }
+    };
+
     class Program
     {
         static void Main(string[] args)
@@ -169,6 +208,7 @@ namespace Классы_и_объекты
             pl0.SetDens(0.8);
             pl0.CalcGrav();
             pl0.SetWater(true);
+            pl0.CreateAtmos(2, true);
             pl0.LifeProb();
 
             Console.WriteLine($"\n");
